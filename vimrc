@@ -1,5 +1,7 @@
 " general settings
 syntax enable					" enable syntax hilight
+filetype plugin on				" enable filetype plugins
+filetype indent on				" enable language-specific indenting
 set nocompatible				" don't be compatible with vi
 set nogdefault					" don't use /g while searching
 set wildmenu					" show menu above the status line
