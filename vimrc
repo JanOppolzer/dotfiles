@@ -1,5 +1,5 @@
 " general settings
-syntax enable					" enable syntax hilight
+syntax enable					" enable syntax highlight
 filetype plugin on				" enable filetype plugins
 filetype indent on				" enable language-specific indenting
 set nocompatible				" don't be compatible with vi
@@ -15,6 +15,7 @@ set ruler					" show the number of line and column
 set smartcase					" ignore case only when lower case used
 set backspace=indent,eol,start			" for backspace to work as expected in insert mode
 set encoding=utf-8				" use unicode
+set hlsearch					" highlight search pattern
 
 " auto completion
 autocmd FileType html inoremap ( ()<Left>
