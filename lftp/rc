@@ -1,0 +1,30 @@
+# settings
+debug 4
+set bmk:save-passwords yes
+set cmd:prompt "\h:\w> "
+set ftp:anon-pass anonymous@anonymous.com
+set ftp:ssl-allow yes
+set ftp:ssl-protect-data yes
+set ftp:ssl-protect-list yes
+set mirror:order *.nfo *.sfv *.md5 *.tar.gz *.tgz *.tar.bz2 *.tbz2 *.rar *.zip *.iso *.img * */
+
+# aliases
+alias W 'set cmd:prompt "\W> "'
+alias d0 "debug off"
+alias d4 "debug 4"
+alias fd "cls -Fl --sort=date | cut -b 44- > ~/ftp-date.txt"
+alias fn "cls -Fl --sort=name | cut -b 58- > ~/ftp-name.txt"
+alias l "!ls -F"
+alias ld "cls -Fl --sort=date | cut -b 44- | less"
+alias ln "cls -Fl --sort=name | cut -b 58- | less"
+alias lsd "cls -1Fl --sort=date | cut -b 44-"
+alias lsn "cls --sort=name"
+alias m "mirror"
+alias p "!pwd"
+alias q "close; cache flush"
+alias u "mirror -Rcp"
+
+alias 1mb "set net:limit-rate 131072"
+alias 2mb "set net:limit-rate 262144"
+alias 4mb "set net:limit-rate 524288"
+
