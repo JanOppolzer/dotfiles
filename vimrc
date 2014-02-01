@@ -8,7 +8,7 @@ set wildmenu					" show menu above the status line
 set wildchar=<Tab>				" set TAB as a wildchar
 set number					" show line numbers
 set showmode					" show editor mode
-set nolinebreak					" break line even inside of a word
+set linebreak					" do not break line inside of a word
 set nowrap					" don't wrap long lines
 set showcmd					" show command in the status bar
 set ruler					" show the number of line and column
