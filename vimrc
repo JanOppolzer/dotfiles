@@ -16,6 +16,10 @@ set smartcase					" ignore case only when lower case used
 set backspace=indent,eol,start			" for backspace to work as expected in insert mode
 set encoding=utf-8				" use unicode
 set hlsearch					" highlight search pattern
+set smartindent					" autoindent when starting a new line
+set tabstop=4					" number of spaces a <Tab> counts for
+set shiftwidth=4				" number of spaces for each step of (auto)indent
+set expandtab					" use the appropriate number of spaces when inserting a <Tab>
 
 " auto completion
 autocmd FileType html inoremap ( ()<Left>
