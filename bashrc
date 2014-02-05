@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export HISTCONTROL=ignorespace:ignoredups
 export PS1="\[\033[01;32m\]\h\[\033[01;34m\] \w \$\[\033[00m\] "
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin"
 export PAGER="vimpager"
 export EDITOR="vim"
 
