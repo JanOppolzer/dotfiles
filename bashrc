@@ -43,6 +43,12 @@ elif [ "$(uname)" == "Linux"  ]; then
 
     # aliases
     alias ls="ls --color=auto"
+
+# OpenBSD
+elif [ "$(uname)" == "OpenBSD" ]; then
+    # aliases
+    alias ls="colorls -G"
+
 fi
 
 # user specific prompt
