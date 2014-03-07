@@ -24,6 +24,7 @@ if [ "$(uname)" == "Darwin" ]; then
     # variables
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin"
     export PAGER="vimpager"
+    export COPYFILE_DISABLE=1
 
     # aliases
     alias ls="ls -FG"
