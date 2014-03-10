@@ -28,7 +28,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
     # aliases
     alias ls="ls -FG"
-    alias df="df -PhT hfs,exfat,fuse4x"
+    alias df="df -PhT hfs,exfat,fuse4x,msdos"
     alias less="$PAGER"
     alias zless="$PAGER"
 
