@@ -23,14 +23,16 @@ set expandtab                   " use the appropriate number of spaces when inse
 set backup                      " backup original file that's being edited
 
 " auto completion
-autocmd FileType html inoremap ( ()<Left>
-autocmd FileType html inoremap () ()<Left>
-autocmd FileType html,css inoremap ' ''<Left>
-autocmd FileType html,css inoremap '' ''<Left>
-autocmd FileType html,css inoremap " ""<Left>
-autocmd FileType html,css inoremap "" ""<Left>
-autocmd FileType css inoremap { {}<Left>
-autocmd FileType css inoremap {} {}<Left>
+autocmd FileType html,php inoremap ( ()<Left>
+autocmd FileType html,php inoremap () ()<Left>
+autocmd FileType html,css,php inoremap ' ''<Left>
+autocmd FileType html,css,php inoremap '' ''<Left>
+autocmd FileType html,css,php inoremap " ""<Left>
+autocmd FileType html,css,php inoremap "" ""<Left>
+autocmd FileType css,php inoremap { {}<Left>
+autocmd FileType css,php inoremap {} {}<Left>
+autocmd FileType php inoremap [ []<Left>
+autocmd FileType php inoremap [] []<Left>
 autocmd FileType perl inoremap ( ()<Left>
 autocmd FileType perl inoremap () ()<Left>
 autocmd FileType perl inoremap { {}<Left>
