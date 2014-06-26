@@ -5,6 +5,7 @@ filetype indent on              " enable language-specific indenting
 set nocompatible                " don't be compatible with vi
 set nogdefault                  " don't use /g while searching
 set wildmenu                    " show menu above the status line
+set wildmode=full               " complete the next full match
 set wildchar=<Tab>              " set TAB as a wildchar
 set number                      " show line numbers by default
 set showmode                    " show editor mode
