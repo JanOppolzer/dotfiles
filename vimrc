@@ -14,6 +14,7 @@ set nowrap                      " don't wrap long lines
 set showcmd                     " show command in the status bar
 set ruler                       " show the number of line and column
 set incsearch                   " show pattern while typing a search command
+set ignorecase                  " required for smartcase below
 set smartcase                   " ignore case only when lower case used
 set hlsearch                    " highlight search pattern
 set backspace=indent,eol,start  " for backspace to work as expected in insert mode
