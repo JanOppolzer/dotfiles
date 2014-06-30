@@ -45,6 +45,11 @@ elif [ "$(uname)" == "Linux"  ]; then
     # aliases
     alias ls="ls --color=auto"
 
+# FreeBSD
+elif [ "$(uname)" == "FreeBSD" ]; then
+    # aliases
+    alias ls="ls -G"
+
 # OpenBSD
 elif [ "$(uname)" == "OpenBSD" ]; then
     # aliases
