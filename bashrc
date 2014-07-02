@@ -37,6 +37,11 @@ if [ "$(uname)" == "Darwin" ]; then
         . /opt/local/etc/profile.d/bash_completion.sh
     fi
 
+    # mc wrapper for exiting to the latest PWD
+    if [ -f /opt/local/libexec/mc/mc.sh ]; then
+        . /opt/local/libexec/mc/mc.sh
+    fi
+
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
     # variables
@@ -44,6 +49,11 @@ elif [ "$(uname)" == "Linux"  ]; then
 
     # aliases
     alias ls="ls --color=auto"
+
+    # mc wrapper for exiting to the latest PWD
+    if [ -f /usr/libexec/mc/mc.sh ]; then
+        . /usr/libexec/mc/mc.sh
+    fi
 
 # FreeBSD
 elif [ "$(uname)" == "FreeBSD" ]; then
