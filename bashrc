@@ -50,6 +50,11 @@ elif [ "$(uname)" == "Linux"  ]; then
     # aliases
     alias ls="ls --color=auto"
 
+    # bash-completion
+    if [ -f /etc/profile.d/bash-completion.sh ]; then
+        . /etc/profile.d/bash-completion.sh
+    fi
+
     # mc wrapper for exiting to the latest PWD
     if [ -f /usr/libexec/mc/mc.sh ]; then
         . /usr/libexec/mc/mc.sh
