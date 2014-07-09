@@ -60,7 +60,6 @@ autocmd FileType php inoremap [] []<Left>
 if has("gui_running")
 
     " general
-    colorscheme solarized       " http://ethanschoonover.com/solarized
     set background=light
     set columns=130 lines=40
 
@@ -72,7 +71,7 @@ if has("gui_running")
     " UNIX (GTK)
     if has("gui_gtk")
         set guifont=DejaVu\ Sans\ Mono\ 8
-        set guioptions=aegiLt
+        set guioptions=aegit
     endif
 
 endif
