@@ -9,6 +9,7 @@ alias l="ls -l"
 alias la="ls -a"
 alias lla="l -a"
 alias lh="l -h"
+alias l1="ls -1"
 
 # ssh aliases
 if [ -f ~/.ssh/aliases ]; then
