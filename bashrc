@@ -10,6 +10,7 @@ alias la="ls -a"
 alias lla="l -a"
 alias lh="l -h"
 alias l1="ls -1"
+alias cal="cal -m"
 
 # ssh aliases
 if [ -f ~/.ssh/aliases ]; then
