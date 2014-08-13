@@ -10,7 +10,6 @@ alias la="ls -a"
 alias lla="l -a"
 alias lh="l -h"
 alias l1="ls -1"
-alias cal="cal -m"
 
 # ssh aliases
 if [ -f ~/.ssh/aliases ]; then
@@ -56,6 +55,7 @@ elif [ "$(uname)" == "Linux"  ]; then
 
     # aliases
     alias ls="ls --color=auto"
+    alias cal="cal -m"
 
     # bash-completion
     if [ -f /etc/profile.d/bash-completion.sh ]; then
