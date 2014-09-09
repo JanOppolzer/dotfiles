@@ -79,9 +79,14 @@ elif [ "$(uname)" == "OpenBSD" ]; then
 
 fi
 
+# host specific settings
+if [ "$(hostname -s)" == "snotra" ]; then
+    export MPD_HOST="$HOME/.mpd/socket"
+fi
+
 # user specific prompt
 if [ "$(id -u)" == "0" ]; then
-    export PS1="\[\033[0;31m\]\h\[\033[0;34m\] \w (\j) \$\[\033[00m\] "
+    export PS1="\[\033[0;31m\]\H\[\033[0;34m\] \w (\j) \$\[\033[00m\] "
 else
     export PS1="\[\033[0;32m\]\h\[\033[0;34m\] \w (\j) \$\[\033[00m\] "
 fi
