@@ -1,0 +1,94 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "ipv6"
+order += "ethernet eth0"
+order += "disk /"
+order += "disk /usr"
+order += "disk /opt"
+order += "disk /tmp"
+order += "disk /var"
+order += "disk /home"
+order += "disk /data/backup"
+order += "disk /data/media"
+#order += "run_watch DHCP"
+#order += "run_watch VPN"
+#order += "wireless wlan0"
+#order += "battery 0"
+order += "load"
+order += "tztime local"
+order += "volume master"
+
+wireless wlan0 {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+ethernet eth0 {
+        # if you use %speed, i3status requires root privileges
+        #format_up = "E: %ip (%speed)"
+        format_up = "%ip"
+        format_down = "E: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining"
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+        pidfile = "/var/run/vpnc/pid"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = "%1min %5min %15min"
+}
+
+disk "/" {
+        format = "/ %percentage_used"
+}
+
+disk "/usr" {
+        format = "/usr %percentage_used"
+}
+
+disk "/opt" {
+        format = "/opt %percentage_used"
+}
+
+disk "/tmp" {
+        format = "/tmp %percentage_used"
+}
+
+disk "/var" {
+        format = "/var %percentage_used"
+}
+
+disk "/home" {
+        format = "/home %percentage_used"
+}
+
+disk "/data/backup" {
+        format = "/data/backup %percentage_used"
+}
+
+disk "/data/media" {
+        format = "/data/media %percentage_used"
+}
+
+volume master {
+        format = "♪: %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
