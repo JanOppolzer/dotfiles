@@ -45,14 +45,12 @@ autocmd FileType css,html,perl,php,xml,xsd inoremap ' ''<Left>
 autocmd FileType css,html,perl,php,xml,xsd inoremap '' ''<Left>
 autocmd FileType css,html,perl,php,xml,xsd inoremap " ""<Left>
 autocmd FileType css,html,perl,php,xml,xsd inoremap "" ""<Left>
-autocmd FileType css,php inoremap { {}<Left>
-autocmd FileType css,php inoremap {} {}<Left>
-autocmd FileType php inoremap <?? <?php ?><Left><Left>
-autocmd FileType php inoremap <?= <?=$?><Left><Left>
+autocmd FileType css,php,perl inoremap { {}<Left>
+autocmd FileType css,php,perl inoremap {} {}<Left>
 autocmd FileType php,perl inoremap ( ()<Left>
 autocmd FileType php,perl inoremap () ()<Left>
-autocmd FileType php,perl inoremap { {}<Left>
-autocmd FileType php,perl inoremap {} {}<Left>
+autocmd FileType php inoremap <?? <?php ?><Left><Left>
+autocmd FileType php inoremap <?= <?=$?><Left><Left>
 autocmd FileType php inoremap [ []<Left>
 autocmd FileType php inoremap [] []<Left>
 
