@@ -52,6 +52,7 @@ elif [ "$(uname)" == "Linux"  ]; then
 
     # variables
     export PATH="$PATH:$HOME/bin"
+    export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
     # aliases
     alias ls="ls --color=auto"
