@@ -26,6 +26,7 @@ if [ "$(uname)" == "Darwin" ]; then
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin"
     export PAGER="vimpager"
     export COPYFILE_DISABLE=1
+    export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
     # aliases
     alias ls="ls -FG"
