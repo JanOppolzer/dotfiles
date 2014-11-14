@@ -76,6 +76,9 @@ elif [ "$(uname)" == "FreeBSD" ]; then
 
 # OpenBSD
 elif [ "$(uname)" == "OpenBSD" ]; then
+    # variables
+    export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+
     # aliases
     alias ls="colorls -G"
 
