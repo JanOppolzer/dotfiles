@@ -53,10 +53,12 @@ elif [ "$(uname)" == "Linux"  ]; then
 
     # variables
     export PATH="$PATH:$HOME/bin"
+    export PAGER="vimpager"
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
     # aliases
     alias ls="ls --color=auto"
+    alias less="$PAGER"
     alias cal="cal -m"
 
     # bash-completion
