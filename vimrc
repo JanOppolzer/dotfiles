@@ -26,7 +26,12 @@ set expandtab                   " use the appropriate number of spaces when inse
 set backup                      " backup original file that's being edited
 
 " pathogen
-execute pathogen#infect()
+if filereadable(expand("~/.vim/autoload/pathogen.vim"))
+    runtime! autoload/pathogen.vim
+    if exists("g:loaded_pathogen")
+        execute pathogen#infect()
+    endif
+endif
 
 " key mapping
 nmap \n :setlocal number!<CR>   " show numbers
@@ -70,6 +75,7 @@ if has("gui_running")
     if has("gui_gtk")
         set guifont=DejaVu\ Sans\ Mono\ 8
         set guioptions=aegit
+        colorscheme solarized
     endif
 
 endif
