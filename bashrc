@@ -75,6 +75,12 @@ elif [ "$(uname)" == "Linux"  ]; then
 elif [ "$(uname)" == "FreeBSD" ]; then
     # aliases
     alias ls="ls -G"
+    alias df="df -ht ufs"
+
+    # bash-completion
+    if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
+        . /usr/local/share/bash-completion/bash_completion.sh
+    fi
 
 # OpenBSD
 elif [ "$(uname)" == "OpenBSD" ]; then
