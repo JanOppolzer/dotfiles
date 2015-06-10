@@ -78,6 +78,7 @@ elif [ "$(uname)" == "FreeBSD" ]; then
     # aliases
     alias ls="ls -G"
     alias df="df -ht ufs"
+    alias top="top -PCs1"
 
     # bash-completion
     if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
