@@ -60,11 +60,13 @@ elif [ "$(uname)" == "Linux"  ]; then
     alias ls="ls --color=auto"
     alias less="$PAGER"
     alias cal="cal -m"
+    alias df="df -ht ext4"
 
     # bash-completion
-    if [ -f /etc/profile.d/bash-completion.sh ]; then
-        . /etc/profile.d/bash-completion.sh
-    fi
+    # Gentoo doesn't need that anymore?
+    #if [ -f /etc/profile.d/bash-completion.sh ]; then
+    #    . /etc/profile.d/bash-completion.sh
+    #fi
 
     # mc wrapper for exiting to the latest PWD
     if [ -f /usr/libexec/mc/mc.sh ]; then
