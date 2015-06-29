@@ -24,6 +24,7 @@ set tabstop=4                   " number of spaces a <Tab> counts for
 set shiftwidth=4                " number of spaces for each step of (auto)indent
 set expandtab                   " use the appropriate number of spaces when inserting a <Tab>
 set backup                      " backup original file that's being edited
+set background=light            " dark colours are more readable on light background
 
 " pathogen
 if filereadable(expand("~/.vim/autoload/pathogen.vim"))
