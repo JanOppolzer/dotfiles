@@ -53,6 +53,7 @@ autocmd FileType css,html,perl,php,xml,xsd inoremap " ""<Left>
 autocmd FileType css,html,perl,php,xml,xsd inoremap "" ""<Left>
 autocmd FileType css,php,perl inoremap { {}<Left>
 autocmd FileType css,php,perl inoremap {} {}<Left>
+autocmd FileType html,xml inoremap <!-- <!-- --><Left><Left><Left>
 autocmd FileType php,perl inoremap ( ()<Left>
 autocmd FileType php,perl inoremap () ()<Left>
 autocmd FileType php inoremap <?? <?php ?><Left><Left>
