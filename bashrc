@@ -17,7 +17,7 @@ if [ -f ~/.ssh/aliases ]; then
 fi
 
 # functions
-mkcd() { mkdir -p "$@" && cd $_; }
+mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # operating system specific settings
 # Darwin
