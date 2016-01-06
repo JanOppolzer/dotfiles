@@ -71,6 +71,7 @@ if has("gui_running")
     " OS X
     if has("macunix")
         set guifont=Monaco:h10
+        colorscheme solarized
     endif
 
     " UNIX (GTK)
