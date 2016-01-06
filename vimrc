@@ -70,7 +70,7 @@ if has("gui_running")
 
     " OS X
     if has("macunix")
-        set guifont=Monaco:h10
+        set guifont=Menlo:h11
         colorscheme solarized
     endif
 
