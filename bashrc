@@ -99,9 +99,9 @@ elif [ "$(uname)" == "OpenBSD" ]; then
 fi
 
 # host specific settings
-if [ "$(hostname -s)" == "snotra" ]; then
-    export MPD_HOST="$HOME/.mpd/socket"
-fi
+#if [ "$(hostname -s)" == "snotra" ]; then
+#    export MPD_HOST="$HOME/.mpd/socket"
+#fi
 
 # user specific prompt
 if [ "$(id -u)" == "0" ]; then
