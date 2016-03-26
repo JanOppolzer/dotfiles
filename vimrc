@@ -61,6 +61,11 @@ autocmd FileType php inoremap <?= <?=$?><Left><Left>
 autocmd FileType php inoremap [ []<Left>
 autocmd FileType php inoremap [] []<Left>
 
+" Dash.app (OS X only)
+if has("macunix")
+    let g:dash_activate=0
+endif
+
 " GUI settings
 if has("gui_running")
 
