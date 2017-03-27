@@ -44,6 +44,10 @@ if [ "$(uname)" == "Darwin" ]; then
         . /opt/local/libexec/mc/mc.sh
     fi
 
+    # virtualenvwrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /opt/local/bin/virtualenvwrapper.sh-2.7
+
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
     # ssh-agent
