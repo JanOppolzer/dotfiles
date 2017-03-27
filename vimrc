@@ -67,6 +67,11 @@ autocmd FileType php inoremap [] []<Left>
 "    \ sw=8 ts=8 sts=8 noexpandtab
 "    \ colorcolumn=78,120
 
+" Dash.app (OS X only)
+if has("macunix")
+    let g:dash_activate=0
+endif
+
 " GUI settings
 if has("gui_running")
 
