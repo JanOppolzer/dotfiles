@@ -61,6 +61,12 @@ autocmd FileType php inoremap <?= <?=$?><Left><Left>
 autocmd FileType php inoremap [ []<Left>
 autocmd FileType php inoremap [] []<Left>
 
+" YAML
+"autocmd BufRead *.yaml,*.yml
+"    \ setlocal syntax=yaml autoindent
+"    \ sw=8 ts=8 sts=8 noexpandtab
+"    \ colorcolumn=78,120
+
 " GUI settings
 if has("gui_running")
 
@@ -76,7 +82,7 @@ if has("gui_running")
 
     " UNIX (GTK)
     if has("gui_gtk")
-        set guifont=DejaVu\ Sans\ Mono\ 8
+        set guifont=DejaVu\ Sans\ Mono\ 7.5
         set guioptions=aegit
         colorscheme solarized
     endif
