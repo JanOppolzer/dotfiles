@@ -73,6 +73,10 @@ elif [ "$(uname)" == "Linux"  ]; then
         . /usr/libexec/mc/mc.sh
     fi
 
+    # virtualenvwrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/bin/virtualenvwrapper.sh
+
 # FreeBSD
 elif [ "$(uname)" == "FreeBSD" ]; then
     # variables
