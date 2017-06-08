@@ -44,6 +44,15 @@ if [ "$(uname)" == "Darwin" ]; then
         . /opt/local/libexec/mc/mc.sh
     fi
 
+    # Git prompt
+    if [ -f /opt/local/share/git/git-prompt.sh ]; then
+        . /opt/local/share/git/git-prompt.sh
+        export GIT_PS1_SHOWDIRTYSTATE=1
+        export GIT_PS1_SHOWSTASHSTATE=1
+        export GIT_PS1_SHOWUNTRACKEDFILES=1
+        export GIT_PS1_SHOWUPSTREAM="auto verbose"
+    fi
+
     # virtualenvwrapper
     export WORKON_HOME=$HOME/.virtualenvs
     source /opt/local/bin/virtualenvwrapper.sh-2.7
@@ -75,6 +84,15 @@ elif [ "$(uname)" == "Linux"  ]; then
     # mc wrapper for exiting to the latest PWD
     if [ -f /usr/libexec/mc/mc.sh ]; then
         . /usr/libexec/mc/mc.sh
+    fi
+
+    # Git prompt
+    if [ -f /usr/share/git/git-prompt.sh ]; then
+        . /usr/share/git/git-prompt.sh
+        export GIT_PS1_SHOWDIRTYSTATE=1
+        export GIT_PS1_SHOWSTASHSTATE=1
+        export GIT_PS1_SHOWUNTRACKEDFILES=1
+        export GIT_PS1_SHOWUPSTREAM="auto verbose"
     fi
 
     # virtualenvwrapper
@@ -116,5 +134,9 @@ if [ "$(id -u)" == "0" ]; then
     export PS1="\[\033[0;31m\]\H\[\033[0;34m\] \w (\j) \$\[\033[00m\] "
 else
     export PS1="\[\033[0;32m\]\h\[\033[0;34m\] \w (\j) \$\[\033[00m\] "
+fi
+
+if [ -v GIT_PS1_SHOWDIRTYSTATE ]; then
+    export PS1='\[\033[0;32m\]\h\[\033[0;34m\] \w (\j)$(__git_ps1 " \[\033[0;36m\](%s)\[\033[0;34m\]") \$\[\033[00m\] '
 fi
 

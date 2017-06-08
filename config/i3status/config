@@ -7,6 +7,7 @@ order += "ipv6"
 order += "ethernet eth0"
 order += "disk /"
 order += "disk /srv"
+order += "cpu_usage"
 order += "load"
 order += "tztime local"
 #order += "volume headphone"
@@ -23,6 +24,10 @@ ethernet eth0 {
 
 tztime local {
         format = "%a %d %b %R:%S"
+}
+
+cpu_usage {
+        format = "cpu: %usage"
 }
 
 load {
