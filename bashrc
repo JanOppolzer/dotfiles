@@ -73,7 +73,7 @@ elif [ "$(uname)" == "Linux"  ]; then
     alias ls="ls --color=auto"
     alias less="$PAGER"
     alias cal="cal -m"
-    alias df="df -h -t ext2 -t ext3 -t ext4 -t btrfs -t fuseblk"
+    alias df="df -h -t ext2 -t ext3 -t ext4 -t btrfs -t fuseblk -t fuse.sshfs"
 
     # bash-completion
     # Gentoo doesn't need that anymore?
