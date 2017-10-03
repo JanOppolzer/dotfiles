@@ -54,8 +54,10 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 
     # virtualenvwrapper
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /opt/local/bin/virtualenvwrapper.sh-2.7
+    if [ -f /opt/local/bin/virtualenvwrapper.sh-2.7 ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        . /opt/local/bin/virtualenvwrapper.sh-2.7
+    fi
 
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
