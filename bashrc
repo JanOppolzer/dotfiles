@@ -30,7 +30,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
     # aliases
     alias ls="ls -FG"
-    alias df="df -PhT hfs,afpfs,exfat,fuse4x,msdos"
+    alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos"
     alias less="$PAGER"
     alias zless="$PAGER"
 
@@ -54,8 +54,10 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 
     # virtualenvwrapper
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /opt/local/bin/virtualenvwrapper.sh-2.7
+    if [ -f /opt/local/bin/virtualenvwrapper.sh-2.7 ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        . /opt/local/bin/virtualenvwrapper.sh-2.7
+    fi
 
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
