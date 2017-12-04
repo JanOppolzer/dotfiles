@@ -98,8 +98,10 @@ elif [ "$(uname)" == "Linux"  ]; then
     fi
 
     # virtualenvwrapper
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /usr/bin/virtualenvwrapper.sh
+    if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/bin/virtualenvwrapper.sh
+    fi
 
 # FreeBSD
 elif [ "$(uname)" == "FreeBSD" ]; then
