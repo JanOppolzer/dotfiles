@@ -12,7 +12,7 @@ set showmode                    " show editor mode
 set linebreak                   " do not break line inside of a word
 set nowrap                      " don't wrap long lines
 set showcmd                     " show command in the status bar
-set ruler                       " show the number of line and column
+set ruler                       " show ruler at the bottom
 set incsearch                   " show pattern while typing a search command
 set ignorecase                  " required for smartcase below
 set smartcase                   " ignore case only when lower case used
@@ -25,6 +25,8 @@ set shiftwidth=4                " number of spaces for each step of (auto)indent
 set expandtab                   " use the appropriate number of spaces when inserting a <Tab>
 set backup                      " backup original file that's being edited
 set background=light            " dark colours are more readable on light background
+set statusline=                 " show default statusline
+"set list                        " show end lines and tabulators
 
 " pathogen
 if filereadable(expand("~/.vim/autoload/pathogen.vim"))
@@ -78,6 +80,7 @@ if has("gui_running")
     " general
     set background=light
     set columns=130 lines=40
+    set linespace=0
 
     " OS X
     if has("macunix")
