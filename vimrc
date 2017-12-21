@@ -97,3 +97,7 @@ if has("gui_running")
 
 endif
 
+" colors
+syn match Tab "\t"
+hi def Tab ctermbg=red guibg=#ff0000
+
