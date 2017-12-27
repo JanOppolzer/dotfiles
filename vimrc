@@ -103,3 +103,6 @@ endif
 syn match Tab "\t"
 hi def Tab ctermbg=red guibg=#ff0000
 
+" restore the position of last edit
+au BufReadPost * normal `"
+
