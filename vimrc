@@ -27,6 +27,7 @@ set backup                      " backup original file that's being edited
 set background=light            " dark colours are more readable on light background
 set statusline=                 " show default statusline
 set matchpairs=(:),[:],{:},<:>  " pairs for '%' command
+set showmatch                   " show pairing symbol (starting one) when typing the ending one
 "set list                        " show end lines and tabulators
 
 " pathogen
