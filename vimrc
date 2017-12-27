@@ -26,6 +26,7 @@ set expandtab                   " use the appropriate number of spaces when inse
 set backup                      " backup original file that's being edited
 set background=light            " dark colours are more readable on light background
 set statusline=                 " show default statusline
+set matchpairs=(:),[:],{:},<:>  " pairs for '%' command
 "set list                        " show end lines and tabulators
 
 " pathogen
