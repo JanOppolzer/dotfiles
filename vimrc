@@ -28,6 +28,8 @@ set background=light            " dark colours are more readable on light backgr
 set statusline=                 " show default statusline
 set matchpairs=(:),[:],{:},<:>  " pairs for '%' command
 set showmatch                   " show pairing symbol (starting one) when typing the ending one
+set cursorline                  " show cursor line (cul)
+set nocursorcolumn              " don't show cursor column (cuc)
 "set list                        " show end lines and tabulators
 
 " pathogen
