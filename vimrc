@@ -1,6 +1,7 @@
 " general settings
 syntax enable                   " enable syntax highlight
 filetype plugin on              " enable filetype plugins
+filetype detect
 filetype indent on              " enable language-specific indenting
 set nocompatible                " don't be compatible with vi
 set nogdefault                  " don't use /g while searching
