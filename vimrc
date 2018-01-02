@@ -102,6 +102,10 @@ if has("gui_running")
         colorscheme solarized
     endif
 
+else
+
+    let g:airline_theme='light'
+
 endif
 
 " colors
