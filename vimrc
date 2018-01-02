@@ -86,7 +86,6 @@ if has("gui_running")
     if has("macunix")
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
         let g:airline_theme='solarized'
-        let g:airline_powerline_fonts=1
         colorscheme solarized
     endif
 
@@ -111,5 +110,6 @@ hi def Tab ctermbg=red guibg=#ff0000
 au BufReadPost * normal `"
 
 " vim-airline
-let g:airline#extensions#tabline#enabled    = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
