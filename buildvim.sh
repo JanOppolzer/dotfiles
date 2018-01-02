@@ -31,6 +31,7 @@ clone_repository https://github.com/garbas/vim-snipmate
 clone_repository https://github.com/honza/vim-snippets
 clone_repository https://github.com/vimoutliner/vimoutliner
 clone_repository https://github.com/sukima/xmledit
+clone_repository https://github.com/luochen1990/rainbow
 
 # get solarized theme
 wget -q -P $COLORS https://raw.githubusercontent.com/altercation/solarized/master/vim-colors-solarized/colors/solarized.vim
