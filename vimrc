@@ -103,3 +103,7 @@ let g:airline_powerline_fonts = 1
 " rainbow parentheses
 let g:rainbow_active = 0
 
+" mapleader
+let mapleader=","
+let maplocalleader=","
+
