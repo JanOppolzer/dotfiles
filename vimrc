@@ -47,11 +47,6 @@ nmap \p :set paste!<CR>         " paste mode
 nmap \q :nohlsearch<CR>         " stop highlighting search result
 nmap \w :set wrap!<CR>          " wrap long lines
 nmap \W :set nowrap!<CR>        " don't wrap long lines
-nmap <C-n> :bnext<CR>           " go to next buffer
-nmap <C-p> :bprev<CR>           " go to previous buffer
-cnoremap <C-a> <Home>
-cnoremap <C-d> <Delete>
-" shift+left / shift+right
 
 " auto completion
 autocmd FileType css,html,perl,php,xml,xsd inoremap ' ''<Left>
