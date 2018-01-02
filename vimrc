@@ -63,12 +63,6 @@ autocmd FileType php inoremap <?= <?=$?><Left><Left>
 autocmd FileType php inoremap [ []<Left>
 autocmd FileType php inoremap [] []<Left>
 
-" YAML
-"autocmd BufRead *.yaml,*.yml
-"    \ setlocal syntax=yaml autoindent
-"    \ sw=8 ts=8 sts=8 noexpandtab
-"    \ colorcolumn=78,120
-
 " Dash.app (OS X only)
 if has("macunix")
     let g:dash_activate=0
