@@ -91,7 +91,7 @@ if has("gui_running")
 
     " UNIX (GTK)
     if has("gui_gtk")
-        set guifont=DejaVu\ Sans\ Mono\ 8
+        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
         set guioptions=aegit
         colorscheme solarized
     endif
