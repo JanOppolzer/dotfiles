@@ -22,6 +22,7 @@ TMP=$GITHUB/tpope/vim-pathogen &&
 
 # get plugins
 clone_repository https://github.com/scrooloose/nerdtree
+clone_repository https://github.com/scrooloose/nerdcommenter
 clone_repository https://github.com/tomtom/tlib_vim
 clone_repository https://github.com/MarcWeber/vim-addon-mw-utils
 clone_repository https://github.com/vim-airline/vim-airline
