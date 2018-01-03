@@ -31,6 +31,7 @@ set matchpairs=(:),[:],{:},<:>  " pairs for '%' command
 set showmatch                   " show pairing symbol (starting one) when typing the ending one
 set cursorline                  " show cursor line (cul)
 set nocursorcolumn              " don't show cursor column (cuc)
+set path+=**                    " search down through subfolders
 "set list                        " show end lines and tabulators
 
 " pathogen
