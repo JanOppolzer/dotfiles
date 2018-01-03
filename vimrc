@@ -101,7 +101,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " rainbow parentheses
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 
 " mapleader
 let mapleader=","
