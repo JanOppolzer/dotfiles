@@ -25,11 +25,29 @@ function get_plugin() {
     echo -e "Done.\n"
 }
 
+function get_pathogen() {
+    TMP=$GITHUB/tpope/vim-pathogen
+
+    echo "Getting tpope/vim-pathogen..."
+
+    if [ -d $TMP ]; then
+        cd $TMP &&
+            git pull
+    else
+        mkdir -p $TMP &&
+            git clone https://github.com/tpope/vim-pathogen $TMP
+    fi
+
+    if [ ! -h $AUTOLOAD/pathogen.vim ]; then
+        echo "Creating symlink for pathogen.vim..."
+        ln -s $TMP/autoload/pathogen.vim $AUTOLOAD/
+    fi
+
+    echo -e "Done.\n"
+}
+
 # pathogen
-TMP=$GITHUB/tpope/vim-pathogen &&
-    mkdir -p $TMP &&
-    git clone -q https://github.com/tpope/vim-pathogen $TMP &&
-    ln -s $TMP/autoload/pathogen.vim $AUTOLOAD/
+get_pathogen
 
 # get plugins
 get_plugin https://github.com/scrooloose/nerdtree
