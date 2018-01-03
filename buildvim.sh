@@ -72,8 +72,12 @@ fi
 
 # matchit.vim
 if [ "$(uname)" == "Darwin" ]; then
-    ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGINS
+    if [ ! -f $PLUGINS/matchit.vim ]; then
+        echo "Creating symlink for matchit.vim..."
+        ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGINS
+        echo -e "Done.\n"
+    fi
 elif [ "$(uname)" == "Linux"  ]; then
-    echo "FIXME!"
+    echo "FIXME! (matchit.vim)"
 fi
 
