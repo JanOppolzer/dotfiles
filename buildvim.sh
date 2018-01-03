@@ -64,7 +64,11 @@ get_plugin https://github.com/sukima/xmledit
 get_plugin https://github.com/luochen1990/rainbow
 
 # get solarized theme
-wget -q -P $COLORS https://raw.githubusercontent.com/altercation/solarized/master/vim-colors-solarized/colors/solarized.vim
+if [ ! -f $COLORS/solarized.vim ]; then
+    echo "Getting solarized.vim color theme..."
+    wget -q -P $COLORS https://raw.githubusercontent.com/altercation/solarized/master/vim-colors-solarized/colors/solarized.vim
+    echo -e "Done.\n"
+fi
 
 # matchit.vim
 if [ "$(uname)" == "Darwin" ]; then
