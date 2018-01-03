@@ -108,3 +108,6 @@ let g:rainbow_active = 1
 let mapleader=","
 let maplocalleader=","
 
+" generate `tags`
+command! MakeTags !ctags -R .
+
