@@ -20,6 +20,11 @@ fi
 # functions
 mkcd() { mkdir -p "$@" && cd "$_"; }
 
+# set TERM for tmux
+if [ "$TERM" == "screen" ]; then
+    export TERM=screen-256color
+fi
+
 # operating system specific settings
 # Darwin
 if [ "$(uname)" == "Darwin" ]; then
