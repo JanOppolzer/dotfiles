@@ -10,6 +10,7 @@ alias la="ls -a"
 alias lla="l -a"
 alias lh="l -h"
 alias l1="ls -1"
+alias xt="export TERM=xterm-256color"
 
 # ssh aliases
 if [ -f ~/.ssh/aliases ]; then
