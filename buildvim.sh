@@ -5,10 +5,10 @@ VIM=~/.vim
 AUTOLOAD=$VIM/autoload
 BUNDLE=$VIM/bundle
 COLORS=$VIM/colors
-PLUGINS=$VIM/plugins
+PLUGIN=$VIM/plugin
 
 mkdir -p $GITHUB
-mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGINS
+mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGIN
 
 function get_plugin() {
     DIR=${1#https://github.com/}
@@ -46,6 +46,17 @@ function get_pathogen() {
     echo -e "Done.\n"
 }
 
+function get_calendar() {
+    if [ ! -d $BUNDLE/calendar ]; then
+        echo "Getting calendar plugin..."
+        wget -O $VIM/calendar.zip http://www.vim.org/scripts/download_script.php?src_id=19707
+        mkdir $BUNDLE/calendar
+        unzip $VIM/calendar.zip -d $BUNDLE/calendar
+        rm $VIM/calendar.zip
+        echo -e "Done.\n"
+    fi
+}
+
 # pathogen
 get_pathogen
 
@@ -63,6 +74,9 @@ get_plugin https://github.com/vimoutliner/vimoutliner
 get_plugin https://github.com/sukima/xmledit
 get_plugin https://github.com/luochen1990/rainbow
 
+# get calendar
+get_calendar
+
 # get solarized theme
 if [ ! -f $COLORS/solarized.vim ]; then
     echo "Getting solarized.vim color theme..."
@@ -72,9 +86,9 @@ fi
 
 # matchit.vim
 if [ "$(uname)" == "Darwin" ]; then
-    if [ ! -f $PLUGINS/matchit.vim ]; then
+    if [ ! -f $PLUGIN/matchit.vim ]; then
         echo "Creating symlink for matchit.vim..."
-        ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGINS
+        ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
         echo -e "Done.\n"
     fi
 elif [ "$(uname)" == "Linux"  ]; then
