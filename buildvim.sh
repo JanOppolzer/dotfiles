@@ -28,7 +28,7 @@ function get_plugin() {
 function get_pathogen() {
     TMP=$GITHUB/tpope/vim-pathogen
 
-    echo "Getting tpope/vim-pathogen..."
+    echo "Getting vim-pathogen..."
 
     if [ -d $TMP ]; then
         cd $TMP &&
