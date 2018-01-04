@@ -11,15 +11,15 @@ mkdir -p $GITHUB
 mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGIN
 
 function get_plugin() {
-    DIR=${1#https://github.com/}
+    DIR=${1##*/}
 
     echo "Getting $DIR..."
 
-    if [ -d $GITHUB/$DIR ]; then
-        cd $GITHUB/$DIR &&
+    if [ -d $BUNDLE/$DIR ]; then
+        cd $BUNDLE/$DIR &&
             git pull
     else
-        echo git clone $1 $BUNDLE/${1##*/}
+        git clone $1 $BUNDLE/$DIR
     fi
 
     echo -e "Done.\n"
@@ -28,7 +28,7 @@ function get_plugin() {
 function get_pathogen() {
     TMP=$GITHUB/tpope/vim-pathogen
 
-    echo "Getting tpope/vim-pathogen..."
+    echo "Getting vim-pathogen..."
 
     if [ -d $TMP ]; then
         cd $TMP &&
@@ -72,7 +72,7 @@ get_plugin https://github.com/garbas/vim-snipmate
 get_plugin https://github.com/honza/vim-snippets
 get_plugin https://github.com/vimoutliner/vimoutliner
 get_plugin https://github.com/sukima/xmledit
-get_plugin https://github.com/luochen1990/rainbow
+#get_plugin https://github.com/luochen1990/rainbow
 
 # get calendar
 get_calendar
@@ -85,13 +85,13 @@ if [ ! -f $COLORS/solarized.vim ]; then
 fi
 
 # matchit.vim
-if [ "$(uname)" == "Darwin" ]; then
-    if [ ! -f $PLUGIN/matchit.vim ]; then
-        echo "Creating symlink for matchit.vim..."
+if [ ! -f $PLUGIN/matchit.vim ]; then
+    echo "Creating symlink for matchit.vim..."
+    if [ "$(uname)" == "Darwin" ]; then
         ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
-        echo -e "Done.\n"
+    elif [ "$(uname)" == "Linux"  ]; then
+        ln -s /usr/share/vim/vim80/macros/matchit.vim $PLUGIN
     fi
-elif [ "$(uname)" == "Linux"  ]; then
-    echo "FIXME! (matchit.vim)"
+    echo -e "Done.\n"
 fi
 
