@@ -111,3 +111,6 @@ let maplocalleader=","
 " generate `tags`
 command! MakeTags !ctags -R .
 
+" mappings
+nnoremap ,html5 :-read $HOME/.vim/snippets/html5.html<CR>5jwf>a
+
