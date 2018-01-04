@@ -11,15 +11,15 @@ mkdir -p $GITHUB
 mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGIN
 
 function get_plugin() {
-    DIR=${1#https://github.com/}
+    DIR=${1##*/}
 
     echo "Getting $DIR..."
 
-    if [ -d $GITHUB/$DIR ]; then
-        cd $GITHUB/$DIR &&
+    if [ -d $BUNDLE/$DIR ]; then
+        cd $BUNDLE/$DIR &&
             git pull
     else
-        echo git clone $1 $BUNDLE/${1##*/}
+        git clone $1 $BUNDLE/$DIR
     fi
 
     echo -e "Done.\n"
