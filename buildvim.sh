@@ -85,13 +85,13 @@ if [ ! -f $COLORS/solarized.vim ]; then
 fi
 
 # matchit.vim
-if [ "$(uname)" == "Darwin" ]; then
-    if [ ! -f $PLUGIN/matchit.vim ]; then
-        echo "Creating symlink for matchit.vim..."
+if [ ! -f $PLUGIN/matchit.vim ]; then
+    echo "Creating symlink for matchit.vim..."
+    if [ "$(uname)" == "Darwin" ]; then
         ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
-        echo -e "Done.\n"
+    elif [ "$(uname)" == "Linux"  ]; then
+        ln -s /usr/share/vim/vim80/macros/matchit.vim $PLUGIN
     fi
-elif [ "$(uname)" == "Linux"  ]; then
-    echo "FIXME! (matchit.vim)"
+    echo -e "Done.\n"
 fi
 
