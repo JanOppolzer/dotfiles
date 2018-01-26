@@ -72,7 +72,7 @@ if has("gui_running")
 
     " OS X
     if has("macunix")
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+        set guifont=Roboto\ Mono\ for\ Powerline
         let g:airline_theme='solarized'
         colorscheme solarized
     endif
