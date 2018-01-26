@@ -113,4 +113,5 @@ command! MakeTags !ctags -R .
 
 " mappings
 nnoremap ,html5 :-read $HOME/.vim/snippets/html5.html<CR>5jwf>a
+nnoremap ,boot3 :-read $HOME/.vim/snippets/bootstrap3.html<CR>5jwf>a
 
