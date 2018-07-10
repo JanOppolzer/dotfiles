@@ -6,9 +6,10 @@ AUTOLOAD=$VIM/autoload
 BUNDLE=$VIM/bundle
 COLORS=$VIM/colors
 PLUGIN=$VIM/plugin
+SNIPPETS=$VIM/snippets
 
 mkdir -p $GITHUB
-mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGIN
+mkdir -p $VIM $AUTOLOAD $BUNDLE $COLORS $PLUGIN $SNIPPETS
 
 function get_plugin() {
     DIR=${1##*/}
@@ -94,4 +95,11 @@ if [ ! -f $PLUGIN/matchit.vim ]; then
     fi
     echo -e "Done.\n"
 fi
+
+# my snippets
+for s in $(ls vim/snippets/); do
+    echo "Creating symlink for $s..."
+    ln -s $(pwd)/vim/snippets/$s $SNIPPETS/$s
+    echo -e "Done.\n"
+done
 
