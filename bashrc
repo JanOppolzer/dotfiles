@@ -68,9 +68,9 @@ if [ "$(uname)" == "Darwin" ]; then
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
     # ssh-agent
-    if [ -f ~/bin/sshagent.sh ]; then
-        . ~/bin/sshagent.sh
-    fi
+    #if [ -f ~/bin/sshagent.sh ]; then
+    #    . ~/bin/sshagent.sh
+    #fi
 
     # variables
     export PATH="$PATH:$HOME/bin"
