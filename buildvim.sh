@@ -18,7 +18,8 @@ function get_plugin() {
 
     if [ -d $BUNDLE/$DIR ]; then
         cd $BUNDLE/$DIR &&
-            git pull
+            git pull &&
+            cd - &>/dev/null
     else
         git clone $1 $BUNDLE/$DIR
     fi
@@ -33,7 +34,8 @@ function get_pathogen() {
 
     if [ -d $TMP ]; then
         cd $TMP &&
-            git pull
+            git pull &&
+            cd - &>/dev/null
     else
         mkdir -p $TMP &&
             git clone https://github.com/tpope/vim-pathogen $TMP
@@ -99,7 +101,7 @@ fi
 # my snippets
 for s in $(ls vim/snippets/); do
     echo "Creating symlink for $s..."
-    ln -s $(pwd)/vim/snippets/$s $SNIPPETS/$s
+    ln -snf $(pwd)/vim/snippets/$s $SNIPPETS/$s
     echo -e "Done.\n"
 done
 
