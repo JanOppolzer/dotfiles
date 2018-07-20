@@ -91,7 +91,7 @@ if [ ! -f $PLUGIN/matchit.vim ]; then
     if [ "$(uname)" == "Darwin" ]; then
         ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
     elif [ "$(uname)" == "Linux"  ]; then
-        ln -s /usr/share/vim/vim80/macros/matchit.vim $PLUGIN
+        ln -s /usr/share/vim/vim81/macros/matchit.vim $PLUGIN
     fi
     echo -e "Done.\n"
 fi
