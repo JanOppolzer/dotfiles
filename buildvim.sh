@@ -89,9 +89,9 @@ fi
 if [ ! -f $PLUGIN/matchit.vim ]; then
     echo "Creating symlink for matchit.vim..."
     if [ "$(uname)" == "Darwin" ]; then
-        ln -s /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
+        ln -snf /opt/local/share/vim/vim80/macros/matchit.vim $PLUGIN
     elif [ "$(uname)" == "Linux"  ]; then
-        ln -s /usr/share/vim/vim81/macros/matchit.vim $PLUGIN
+        ln -snf /usr/share/vim/vim81/macros/matchit.vim $PLUGIN
     fi
     echo -e "Done.\n"
 fi
