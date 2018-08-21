@@ -75,6 +75,7 @@ get_plugin https://github.com/garbas/vim-snipmate
 get_plugin https://github.com/honza/vim-snippets
 get_plugin https://github.com/vimoutliner/vimoutliner
 get_plugin https://github.com/sukima/xmledit
+get_plugin https://github.com/ap/vim-css-color
 #get_plugin https://github.com/luochen1990/rainbow
 
 # get calendar
