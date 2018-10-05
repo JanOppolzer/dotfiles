@@ -119,3 +119,4 @@ nnoremap ,html5 :-read $HOME/.vim/snippets/html5.html<CR>5jwf>a
 nnoremap ,boot3 :-read $HOME/.vim/snippets/bootstrap3.html<CR>5jwf>a
 nnoremap ,boot4 :-read $HOME/.vim/snippets/bootstrap4.html<CR>7jwf>a
 
+inoremap ,jo <CR>S pozdravem<CR>Jan Oppolzer
