@@ -29,7 +29,7 @@ fi
 # Darwin
 if [ "$(uname)" == "Darwin" ]; then
     # variables
-    export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin"
+    export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin:$HOME/.composer/vendor/bin"
     export PAGER="vimpager"
     export COPYFILE_DISABLE=1
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
