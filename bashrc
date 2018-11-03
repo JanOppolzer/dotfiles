@@ -3,6 +3,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export HISTCONTROL=ignorespace:ignoredups
 export EDITOR="vim"
+export MANPAGER="less -X"
 
 # aliases
 alias l="ls -l"
