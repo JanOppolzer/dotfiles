@@ -120,3 +120,6 @@ nnoremap ,boot3 :-read $HOME/.vim/snippets/bootstrap3.html<CR>5jwf>a
 nnoremap ,boot4 :-read $HOME/.vim/snippets/bootstrap4.html<CR>7jwf>a
 
 inoremap ,jo S pozdravem<CR>Jan Oppolzer<CR>
+
+map <F5> :NERDTreeToggle<CR>
+
