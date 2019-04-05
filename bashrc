@@ -5,6 +5,7 @@ export HISTCONTROL=ignorespace:ignoredups
 export EDITOR="vim"
 export MANPAGER="less -X"
 export LESS_TERMCAP_md=$'\E[1;36m'
+export GREP_COLOR="auto"
 
 # aliases
 alias l="ls -l"
