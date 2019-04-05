@@ -5,7 +5,6 @@ export HISTCONTROL=ignorespace:ignoredups
 export EDITOR="vim"
 export MANPAGER="less -X"
 export LESS_TERMCAP_md=$'\E[1;36m'
-export GREP_COLOR="auto"
 
 # aliases
 alias l="ls -l"
@@ -36,6 +35,8 @@ if [ "$(uname)" == "Darwin" ]; then
     export PAGER="vimpager"
     export COPYFILE_DISABLE=1
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    export GREP_OPTIONS="--color=auto"
+    export GREP_COLOR="1;31;49"
 
     # aliases
     alias ls="ls -FG"
