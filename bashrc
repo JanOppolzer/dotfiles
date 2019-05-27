@@ -53,8 +53,8 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 
     # Git prompt
-    if [ -f /opt/local/share/git/git-prompt.sh ]; then
-        . /opt/local/share/git/git-prompt.sh
+    if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+        . /usr/local/etc/bash_completion.d/git-prompt.sh
         export GIT_PS1_SHOWDIRTYSTATE=1
         export GIT_PS1_SHOWSTASHSTATE=1
         export GIT_PS1_SHOWUNTRACKEDFILES=1
