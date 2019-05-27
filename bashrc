@@ -61,12 +61,6 @@ if [ "$(uname)" == "Darwin" ]; then
         export GIT_PS1_SHOWUPSTREAM="auto verbose"
     fi
 
-    # virtualenvwrapper
-    if [ -f /opt/local/bin/virtualenvwrapper.sh-2.7 ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        . /opt/local/bin/virtualenvwrapper.sh-2.7
-    fi
-
 # Linux
 elif [ "$(uname)" == "Linux"  ]; then
     # ssh-agent
