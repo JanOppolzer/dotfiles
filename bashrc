@@ -48,8 +48,8 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 
     # mc wrapper for exiting to the latest PWD
-    if [ -f /opt/local/libexec/mc/mc.sh ]; then
-        . /opt/local/libexec/mc/mc.sh
+    if [ -f /usr/local/Cellar/midnight-commander/4.8.22/libexec/mc/mc.sh ]; then
+        . /usr/local/Cellar/midnight-commander/4.8.22/libexec/mc/mc.sh
     fi
 
     # Git prompt
