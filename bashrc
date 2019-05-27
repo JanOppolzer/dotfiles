@@ -32,7 +32,6 @@ fi
 if [ "$(uname)" == "Darwin" ]; then
     # variables
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin:$HOME/.composer/vendor/bin"
-    export PAGER="vimpager"
     export COPYFILE_DISABLE=1
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
     export GREP_OPTIONS="--color=auto"
@@ -41,8 +40,6 @@ if [ "$(uname)" == "Darwin" ]; then
     # aliases
     alias ls="ls -FG"
     alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos,osxfuse,nfs"
-    alias less="$PAGER"
-    alias zless="$PAGER"
 
     # bash-completion
     if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
