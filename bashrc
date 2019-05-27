@@ -42,8 +42,9 @@ if [ "$(uname)" == "Darwin" ]; then
     alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos,osxfuse,nfs"
 
     # bash-completion
-    if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-        . /opt/local/etc/profile.d/bash_completion.sh
+    export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+    if [ -r /usr/local/etc/profile.d/bash_completion.sh ]; then
+        . /usr/local/etc/profile.d/bash_completion.sh
     fi
 
     # mc wrapper for exiting to the latest PWD
