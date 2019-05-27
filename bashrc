@@ -31,7 +31,7 @@ fi
 # Darwin
 if [ "$(uname)" == "Darwin" ]; then
     # variables
-    export PATH="/opt/local/bin:/opt/local/sbin:$PATH:$HOME/bin:$HOME/.composer/vendor/bin"
+    export PATH="$PATH:$HOME/bin"
     export COPYFILE_DISABLE=1
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
     export GREP_OPTIONS="--color=auto"
