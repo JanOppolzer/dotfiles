@@ -32,6 +32,7 @@ fi
 if [ "$(uname)" == "Darwin" ]; then
     # variables
     export PATH="${HOME}/bin:${HOME}/.composer/vendor/bin:${PATH}"
+    export PATH="/usr/local/sbin/:${PATH}" # Homebrew
     export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # MySQL 5.7 (Homebrew)
     export COPYFILE_DISABLE=1
     export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
