@@ -42,7 +42,6 @@ if [ "$(uname)" == "Darwin" ]; then
     # aliases
     alias ls="ls -FG"
     alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos,osxfuse,nfs"
-    alias mutt="neomutt"
 
     # bash-completion
     export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
