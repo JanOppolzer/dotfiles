@@ -124,3 +124,5 @@ inoremap ,jo S pozdravem<CR>Jan Oppolzer<CR>
 
 map <F5> :NERDTreeToggle<CR>
 
+let g:snipMate = { 'snippet_version' : 1 }
+
