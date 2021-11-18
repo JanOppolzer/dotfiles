@@ -1,5 +1,7 @@
 # autoload
 autoload -Uz compinit && compinit
+autoload -U promptinit && promptinit
+prompt spaceship
 
 # setopt
 setopt autocd
@@ -38,12 +40,6 @@ if [ "$(uname)" = "Darwin" ]; then
     # aliases
     alias ls="ls -FG"
     alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos,osxfuse,nfs"
-
-    # git prompt
-    source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
-    PROMPT='%B%F{green}%m%f %F{blue}%~%f%b %# '
-    ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[cyan]%}"
-    ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[cyan]%}%{✚%G%}"
 fi
 
 setopt prompt_subst
