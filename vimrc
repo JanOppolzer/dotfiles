@@ -60,11 +60,6 @@ autocmd FileType php inoremap [] []<Left>
 " settings for mail (within mutt)
 "autocmd FileType mail setlocal formatoptions+=a
 
-" Dash.app (OS X only)
-if has("macunix")
-    let g:dash_activate=0
-endif
-
 " GUI settings
 if has("gui_running")
 
