@@ -1,7 +1,7 @@
 # autoload
 autoload -Uz compinit && compinit
 autoload -U promptinit && promptinit
-prompt spaceship
+source "/usr/local/opt/spaceship/spaceship.zsh"
 
 # setopt
 setopt autocd
@@ -31,8 +31,6 @@ fi
 if [ "$(uname)" = "Darwin" ]; then
     # exports
     export PATH="${HOME}/bin:${HOME}/.composer/vendor/bin:${PATH}:/usr/local/sbin"
-    export PATH="/usr/local/opt/php@7.4/bin:$PATH"
-    export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
     export COPYFILE_DISABLE=1
     export GREP_OPTIONS="--color=auto"
     export GREP_COLOR="1;31;49"
