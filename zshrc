@@ -41,6 +41,14 @@ if [ "$(uname)" = "Darwin" ]; then
     alias df="df -PhT apfs,hfs,afpfs,exfat,fuse4x,msdos,osxfuse,nfs"
 fi
 
+ansible_vaults() {
+    for file in /Volumes/Encrypted/ansible-vaults/*.txt; do
+        printf "\55\55vault-id=%s@%s " "$(basename ${file})" "${file}"
+    done
+}
+alias ansible-playbook="ansible-playbook $(ansible_vaults)"
+alias ansible="ansible $(ansible_vaults)"
+
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
 
