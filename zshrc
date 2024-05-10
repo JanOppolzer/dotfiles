@@ -20,6 +20,7 @@ alias la="ls -la"
 alias lla="l -a"
 alias lh="l -h"
 alias l1="ls -1"
+alias nah="git reset --hard; git clean -df"
 
 # ssh aliases
 if [ -f ~/.ssh/aliases ]; then
